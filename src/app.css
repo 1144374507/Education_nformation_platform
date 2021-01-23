@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    margin: 0 auto;
+    width: 60%;
+}
+
+.left-nav-bar {
+    position: relative;
+}
+.content-home {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
