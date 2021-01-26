@@ -1,0 +1,139 @@
+
+.contenter-bar{
+  width: 1412px;
+  height: 980px;
+  margin: 0 auto;
+}
+/* 内容区 左侧导航栏 */
+.contenter-left-nav-bar{
+  width: 240px;
+  height: 980px;
+  float: left;
+}
+/* 个人中心 */
+.personal-center-bar{
+  width: 240px;
+  height: 55px;
+  position: relative;
+}
+/* 返回按钮 */
+.back{
+  width: 32px;
+  height: 55px;
+  background-color: #fff;
+  background-image:url(../img/back.png);
+  border: none;
+}
+.back:hover{
+  background-image:url(../img/back_hover.png);
+
+}
+.back:focus{
+  outline: none;
+  
+}
+.back:active{
+  background-image:url(../img/back_avtive.png);
+
+}
+
+.contenter-left-nav-bar{
+  border-right: 1px solid #999999;
+}
+
+/* 个人中心Text */
+.personal-center{
+  /* display: inline-block; */
+  position: absolute;
+  top: 14px;
+  left: 50px;
+  font-size: 20px;
+  color: #a9a9a9;
+}
+
+.personal-center-right{
+  width: 47px;
+  height: 55px;
+  background-image: url(../img/rectangular.png);
+  float: right;
+}
+.personal-center-right:hover{
+  background-image: url(../img/rectangular_hover.png);
+}
+.personal-center-right:active{
+  background-image: url(../img/rectangular_fouce.png);
+}
+.nav-ul a{
+  font-size: 14px;
+  color: #333333;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+.nav-list{
+  width: 240px;
+  height: 60px;
+  line-height: 60px;
+}
+.nav-list:hover{
+  background-color:  #f4f5f5;
+}
+
+/* 矢量图标 */
+.nav-list i{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-position-y: 2px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 20px;
+  margin-left: 27px;
+}
+.others-bg-img{
+  background-image: url(../img/others.png) ;
+}
+
+.active .others-bg-img{
+  background-image: url(../img/others_active.png) ;
+}
+.home-bg-img{
+  background-image: url(../img/Home.png) ;
+}
+.active .home-bg-img{
+  background-image: url(../img/Home_avtive.png) ;
+}
+.class-bg-img{
+  background-image: url(../img/class.png) ;
+}
+.active .class-bg-img{
+  background-image: url(../img/class_active.png) ;
+}
+.time-bg-img{
+  background-image: url(../img/time.png) ;
+}
+.active .time-bg-img{
+  background-image: url(../img/time_active.png) ;
+}
+
+/* NavLink 激活 样式 */
+.active li{
+  background-color: #f4f5f5;
+  width: 237px;
+
+  color: #3ba8f0;
+  border-left: 3px solid #3ba8f0;
+} 
+.active i{
+  margin-left: 24px;
+}
+
+
+/* 内容区 容器*/
+.contenter-right-bar{
+  width: 1138px;
+  height: 980px;
+  float: right;
+}

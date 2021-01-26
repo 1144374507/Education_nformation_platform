@@ -1,0 +1,72 @@
+
+/* 课程详情 */
+.class-details{
+  position: relative;
+  width: 340px;
+  height: 160px; 
+  margin-right: 19px;
+  margin-bottom: 10px;
+  background-image: url(../img/detial_bg.png);  
+  box-shadow: 0 0 10px  #f4f5f5;
+  }
+  .class-details:hover{
+  /* outline: 1px solid #3ca8f0; */
+  background-image: url(../img/detial_bg_hover.png);
+  box-shadow: 3px 3px 10px  #d8dada;
+  
+  }
+  .class-details:active{
+  background-image: url(../img/detial_bg_active.png);
+  
+  }
+  
+  .course-logo{
+  position: absolute;
+  /* float: left; */
+  width: 105px;
+  height: 104px;
+  margin-top: 29px;
+  margin-left: 31px;
+  background-image: url(../img/class_logo.png);
+  }
+  .class-detail{
+  position: absolute;
+  height: 104px;
+  margin-top: 29px;
+  margin-left: 155px;
+  
+  }
+  .class-detail p{
+  margin: 0;
+  padding: 0;
+  margin: 8px 0; 
+  font-size: 14px;
+  color: #333333;
+  }
+  .class-detail i{
+  color: #999;
+  }
+  .class-details-btn{
+  position: absolute;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: 56px;
+  height: 20px;
+  right: 0;
+  bottom: 0;
+  background-color:initial;
+  background-image: url(../img/Administrative.png);
+  color: #fff;
+  font-size: 12px;
+  }
+  .class-details-btn:hover{
+  background-image: url(../img/Administrative_hover.png);
+  } 
+  .class-details-btn:focus{
+  outline: none;
+  }
+  .class-details-btn:active{
+  background-image: url(../img/Administrative_active.png);
+  
+  }

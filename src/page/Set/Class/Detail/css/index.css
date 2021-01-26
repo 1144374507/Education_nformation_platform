@@ -1,0 +1,117 @@
+
+.contenter-right-bar{
+  position: relative;
+}
+.class-detail-totabar{
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  /* height: 500px; */
+
+  top: 0;
+}
+
+
+
+/* 搜索框容器 */
+.class-metail-search-bar{
+  position: relative;
+  height: 96px;
+  line-height: 96px;
+  /* background-color: rgb(214, 233, 148); */
+  text-align: center;
+}
+.class-metail-search-bar h3{
+  /* position: absolute; */
+  font-size: 20px;
+  color: #333;
+}
+/* 搜索框 bar*/
+.class-metail-search{
+  position: absolute;
+  width: 300px;
+  height: 36px;
+  right: 0;
+  top: 31px;
+  /* background-color: rgb(229, 240, 165); */
+}
+/* 搜索框 */
+.class-metail-search input{
+  width: 244px;
+  height: 34px;
+  border: 1px solid #3ca8f0;
+  border-right: none;
+  margin: 0;
+  padding: 0;
+  padding-left:5px;
+  border-radius: 0;
+  float: left;
+  font-size: 14px;
+}
+/* 搜索框按钮 */
+.class-metail-search button{
+  width: 50px;
+  height: 36px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-image: url(../img/detail_search.png);
+  border-radius: 0;
+  float: right;
+}
+.class-metail-search button:focus{
+  outline: none;
+  
+}
+.class-metail-search button:active{
+  box-shadow: 0 0 10px inset #24648f;
+}
+.class-metail-search input:focus{
+  outline: none;
+  box-shadow: 0 0 6px inset #3ca8f0 ;
+}
+.class-metail-search:hover{
+  box-shadow: 0 0 5px #3ca8f0;
+}
+
+/* 班级信息容器 */
+.class-detail-bar{
+  width: 1137px;
+  height: 697px;
+  /* background-color: rgb(149, 238, 161); */
+  border: 1px solid #ddd;
+}
+/* 班级详细信息导航栏 */
+.class-detail-nav-bar{
+  height: 36px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+}
+.class-detail-nav-bar li{
+  float: left;
+  width: 180px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: #666666;
+  font-size: 14px;
+  /* background-color: rgb(221, 234, 240); */
+}
+
+
+/* 路由选中样式 */
+.class-detail-li-active li{
+  background-color: #fff;
+  width:178px ;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  color: #62b5f2;
+}
+.class-detail-nav-bar li:first-child.class-detail-li-active {
+  background-color: #fff;
+  width:179px ;
+  border-right: 1px solid #ddd;
+  border-left: none;
+}
+
+
+

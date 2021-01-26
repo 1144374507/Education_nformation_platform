@@ -1,0 +1,155 @@
+/* 头部导航条 */
+.header-bar{
+  height: 57px;
+  width: 1420px;
+  margin: 0 auto;
+  /* line-height: 57px; */
+
+  /* background-color: #bfa; */
+}
+
+/* 左侧logo */
+.logo{
+  position: relative;
+  float: left;
+  width: 240px;
+  height: 57px;
+  /* background-color: rgb(196, 235, 152); */
+}
+.logo img{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  margin: auto 0;
+}
+.logo .title{
+  position: absolute;
+  background: url(../img/title.png);
+  width: 193px;
+  height: 57px;
+  right: 0;
+}
+
+/* 中间的链接 */
+.route-link-bar{
+  float: left;
+  position: relative;
+  width: 940px;
+  height: 57px;
+  /* background-color: rgb(139, 183, 219); */
+  padding: 0 ;
+}
+.wjt-link{
+  float: left;
+  width: 45px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  border: 1px solid #21944b;
+  border-radius: 10px;
+  background-color: #21944b;
+  padding-bottom: 1px;
+  margin-top: 19px;
+}
+.wjt-link a{
+  font-size: 12px;
+  color: #ffffff;
+}
+.route-link-div{
+  float: left;
+  width: 749px;
+  line-height: 57px;
+  display: flex;
+  justify-content : flex-end
+}
+.route-link{
+  flex: 1;
+  text-decoration: none;
+  font-size: 16px;
+  color: #000;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+}
+.route-link:hover ,
+.route-link:focus{
+  color: #3ba8f0;
+}
+
+.header-serch-bar{
+  float: right;
+  width: 130px;
+  height: 57px;
+  /* background-color: #000; */
+}
+.new-bg{
+  display: inline-block;
+  font-size: 12px;
+  text-decoration: none;
+  color: #ffffff;
+  background-image: url(../img/nwe.png);
+  background-repeat: no-repeat;
+  width: 58px;
+  height: 20px;
+  line-height: 20px;
+  padding-left: 4px;
+  margin-top: 21px;
+  margin-left: 10px;
+}
+.new-bg:hover,
+.new-bg:focus{
+  color: #3ba8f0;
+
+}
+
+.header-serch{
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/search-bg-img.png);
+  background-repeat: no-repeat;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
+  margin: auto 0;
+  right: 4px;
+}
+.user-bar{
+  width: 225px;
+  height: 57px;
+  line-height: 57px;
+  /* background-color: rgb(83, 22, 102); */
+  float: right;
+  text-align: center;
+  padding-right: 10px;
+}
+/* .user-bar>div{
+  height: 57px;
+  line-height: 57px;
+display: inline-block;
+
+} */
+.user-avatar{
+  width: 33px;
+  height: 34px;
+  display: inline-block;
+  margin-top: 12px;
+  /* background-color: #bfa; */
+}
+.user-name{
+  display: inline-block;
+  overflow: hidden;
+  margin-left: 5px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  /* background-color: #ccc; */
+}

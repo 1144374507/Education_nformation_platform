@@ -1,0 +1,20 @@
+/* 放回我的班级按钮 */
+.back-myclass-btn{
+float: right;
+width: 100px;
+height: 35px;
+border: none;
+background-image: url(../img/btn.png);
+color: #fff;
+}
+.back-myclass-btn:hover{
+background-image: url(../img/btn_hover.png);
+
+}
+.back-myclass-btn:active{
+background-image: url(../img/btn_active.png);
+}
+.back-myclass-btn:focus{
+outline: none;
+
+}
