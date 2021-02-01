@@ -1,0 +1,386 @@
+{
+  "classes": [
+    {
+      "id": 1,
+      "section": "高中-2013级",
+      "grade": "三年二班",
+      "headmaster": "田小雨",
+      "teacherId": 1,
+      "classType": "行政班"
+    },
+    {
+      "id": 4,
+      "section": "高中-2016级",
+      "grade": "三年二班",
+      "headmaster": "田小雨",
+      "teacherId": 2,
+      "classType": "行政班"
+    },
+    {
+      "id": 2,
+      "section": "高中-2015级",
+      "grade": "三年二班",
+      "headmaster": "田小雨",
+      "teacherId": 3,
+      "classType": "行政班"
+    },
+    {
+      "id": 3,
+      "section": "高中-2014级",
+      "grade": "三年二班",
+      "headmaster": "田小雨",
+      "teacherId": 4,
+      "classType": "行政班"
+    },
+    {
+      "id": 1,
+      "section": "高中-2013级",
+      "grade": "三年二班",
+      "headmaster": "田小雨",
+      "teacherId": 1,
+      "classType": "教学班"
+    },
+    {
+      "id": 4,
+      "section": "高中-2016级",
+      "grade": "三年二班",
+      "headmaster": "田小雨",
+      "teacherId": 2,
+      "classType": "教学班"
+    },
+    {
+      "id": 2,
+      "section": "高中-2015级",
+      "grade": "三年二班",
+      "headmaster": "田小雨",
+      "teacherId": 3,
+      "classType": "教学班"
+    },
+    {
+      "id": 3,
+      "section": "高中-2014级",
+      "grade": "三年二班",
+      "headmaster": "田小雨",
+      "teacherId": 4,
+      "classType": "教学班"
+    }
+  ],
+  "teachers": [
+    {
+      "id": 1,
+      "name": "王朝",
+      "subject": "英语老师",
+      "adm": true,
+      "classId": 1
+    },
+    {
+      "id": 2,
+      "name": "马汉",
+      "subject": "数学老师",
+      "adm": false,
+      "classId": 1
+    },
+    {
+      "id": 3,
+      "name": "张龙",
+      "subject": "体育老师",
+      "adm": false,
+      "classId": 1
+    },
+    {
+      "id": 4,
+      "name": "赵虎",
+      "subject": "物理老师",
+      "adm": false,
+      "classId": 1
+    },
+    {
+      "id": 1,
+      "name": "王朝",
+      "subject": "英语老师",
+      "adm": true,
+      "classId": 2
+    },
+    {
+      "id": 2,
+      "name": "马汉",
+      "subject": "数学老师",
+      "adm": false,
+      "classId": 2
+    },
+    {
+      "id": 3,
+      "name": "张龙",
+      "subject": "体育老师",
+      "adm": false,
+      "classId": 2
+    },
+    {
+      "id": 4,
+      "name": "赵虎",
+      "subject": "物理老师",
+      "adm": false,
+      "classId": 2
+    },
+    {
+      "id": 1,
+      "name": "王朝",
+      "subject": "英语老师",
+      "adm": true,
+      "classId": 3
+    },
+    {
+      "id": 2,
+      "name": "马汉",
+      "subject": "数学老师",
+      "adm": false,
+      "classId": 3
+    },
+    {
+      "id": 3,
+      "name": "张龙",
+      "subject": "体育老师",
+      "adm": false,
+      "classId": 3
+    },
+    {
+      "id": 4,
+      "name": "赵虎",
+      "subject": "物理老师",
+      "adm": false,
+      "classId": 3
+    },
+    {
+      "id": 1,
+      "name": "王朝",
+      "subject": "英语老师",
+      "adm": true,
+      "classId": 4
+    },
+    {
+      "id": 2,
+      "name": "马汉",
+      "subject": "数学老师",
+      "adm": false,
+      "classId": 4
+    },
+    {
+      "id": 3,
+      "name": "张龙",
+      "subject": "体育老师",
+      "adm": false,
+      "classId": 4
+    },
+    {
+      "id": 4,
+      "name": "赵虎",
+      "subject": "物理老师",
+      "adm": false,
+      "classId": 4
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "name": "佩奇",
+      "classId": 1
+    },
+    {
+      "id": 2,
+      "name": "乔治",
+      "classId": 1
+    },
+    {
+      "id": 2,
+      "name": "乔治",
+      "classId": 1
+    },
+    {
+      "id": 3,
+      "name": "老王",
+      "classId": 1
+    },
+    {
+      "id": 4,
+      "name": "张三",
+      "classId": 1
+    },
+    {
+      "id": 1,
+      "name": "佩奇",
+      "classId": 2
+    },
+    {
+      "id": 2,
+      "name": "乔治",
+      "classId": 2
+    },
+    {
+      "id": 3,
+      "name": "老王",
+      "classId": 2
+    },
+    {
+      "id": 4,
+      "name": "张三",
+      "classId": 2
+    },
+    {
+      "id": 1,
+      "name": "佩奇",
+      "classId": 3
+    },
+    {
+      "id": 2,
+      "name": "乔治",
+      "classId": 3
+    },
+    {
+      "id": 3,
+      "name": "老王",
+      "classId": 3
+    },
+    {
+      "id": 4,
+      "name": "张三",
+      "classId": 3
+    },
+    {
+      "id": 1,
+      "name": "佩奇",
+      "classId": 3
+    },
+    {
+      "id": 2,
+      "name": "乔治",
+      "classId": 3
+    },
+    {
+      "id": 3,
+      "name": "老王",
+      "classId": 3
+    },
+    {
+      "id": 4,
+      "name": "张三",
+      "classId": 3
+    },
+    {
+      "id": 1,
+      "name": "佩奇",
+      "classId": 4
+    },
+    {
+      "id": 2,
+      "name": "乔治",
+      "classId": 4
+    },
+    {
+      "id": 3,
+      "name": "老王",
+      "classId": 4
+    },
+    {
+      "id": 2,
+      "name": "乔治",
+      "classId": 4
+    },
+    {
+      "id": 3,
+      "name": "老王",
+      "classId": 4
+    },
+    {
+      "id": 4,
+      "name": "张三",
+      "classId": 4
+    }
+  ],
+  "parents": [
+    {
+      "id": 1,
+      "name": "刘德华",
+      "classId": 1
+    },
+    {
+      "id": 2,
+      "name": "郭富城",
+      "classId": 1
+    },
+    {
+      "id": 3,
+      "name": "黎明",
+      "classId": 1
+    },
+    {
+      "id": 4,
+      "name": "张学友",
+      "classId": 1
+    },
+    {
+      "id": 1,
+      "name": "刘德华",
+      "classId": 2
+    },
+    {
+      "id": 2,
+      "name": "郭富城",
+      "classId": 2
+    },
+    {
+      "id": 3,
+      "name": "黎明",
+      "classId": 2
+    },
+    {
+      "id": 4,
+      "name": "张学友",
+      "classId": 2
+    },
+    {
+      "id": 1,
+      "name": "刘德华",
+      "classId": 3
+    },
+    {
+      "id": 2,
+      "name": "郭富城",
+      "classId": 3
+    },
+    {
+      "id": 3,
+      "name": "黎明",
+      "classId": 3
+    },
+    {
+      "id": 4,
+      "name": "张学友",
+      "classId": 3
+    },
+    {
+      "id": 1,
+      "name": "刘德华",
+      "classId": 4
+    },
+    {
+      "id": 2,
+      "name": "郭富城",
+      "classId": 4
+    },
+    {
+      "id": 3,
+      "name": "黎明",
+      "classId": 4
+    },
+    {
+      "id": 4,
+      "name": "张学友",
+      "classId": 14
+    }
+  ],
+  "create": [
+    {
+      "id": 1
+    }
+  ]
+}
