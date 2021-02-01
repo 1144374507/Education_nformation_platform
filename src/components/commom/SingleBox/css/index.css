@@ -1,0 +1,42 @@
+/* 手写类型单选框 */
+.single-box{
+  display: inline-block;
+  margin-left: 29px;
+}
+.single-box span{
+  display: inline-block;
+  position: absolute;
+  top: 1px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #bdbdbd;
+  border-radius: 50%;
+  padding: 2px;
+  margin-top: 0px;
+
+  /* 设置padding 不算内容区 */
+  background-clip: content-box;
+}
+/* .single-box div:hover span, */
+.single-box-foucs span{
+  border: 1px solid #40aaf0;
+  background-color: #3ba8f0;
+}
+
+.single-box div{
+  position: relative;
+  display: inline-block;
+  height: 26px;
+  line-height: 16px;
+  margin-right: 20px;
+
+}
+
+.single-box a{
+  display: inline-block;
+  text-decoration: none;
+  min-width:55px;
+  color: #666;
+  font-size: 14px;
+  margin-left: 26px;
+}

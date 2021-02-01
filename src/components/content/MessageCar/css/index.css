@@ -59,3 +59,20 @@
   background-color: #f99d43;
 
 }
+.personal-profile{
+  position: absolute;
+  bottom: 33px;
+  left: 50%;
+  width: 200px;
+  height: 48px;
+  line-height: 48px;
+  text-align-last: center;
+  font-size: 12px;
+  color: #f194c3;
+  background-color: rgba(165, 210, 228, 0.432);
+  display: none;
+}
+ .detail-message:hover .personal-profile{
+  display: block;
+  z-index: 9;
+}

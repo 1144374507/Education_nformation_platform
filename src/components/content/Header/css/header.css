@@ -3,9 +3,6 @@
   height: 57px;
   width: 1420px;
   margin: 0 auto;
-  /* line-height: 57px; */
-
-  /* background-color: #bfa; */
 }
 
 /* 左侧logo */
@@ -14,7 +11,6 @@
   float: left;
   width: 240px;
   height: 57px;
-  /* background-color: rgb(196, 235, 152); */
 }
 .logo img{
   position: absolute;
@@ -108,7 +104,7 @@
   color: #3ba8f0;
 
 }
-
+/* 搜索按钮 */
 .header-serch{
   width: 20px;
   height: 20px;
@@ -131,19 +127,15 @@
   text-align: center;
   padding-right: 10px;
 }
-/* .user-bar>div{
-  height: 57px;
-  line-height: 57px;
-display: inline-block;
 
-} */
+/* 用户头像 */
 .user-avatar{
   width: 33px;
   height: 34px;
   display: inline-block;
   margin-top: 12px;
-  /* background-color: #bfa; */
 }
+/* ？用户名 */
 .user-name{
   display: inline-block;
   overflow: hidden;

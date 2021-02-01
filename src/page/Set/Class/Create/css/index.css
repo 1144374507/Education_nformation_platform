@@ -1,0 +1,233 @@
+.contenter-right-bar{
+  position: relative;
+}
+.class-create-totabar{
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  /* height: 500px; */
+
+  top: 0;
+}
+.class-create-bar{
+  width: 1137px;
+  height: 897px;
+  margin-top: 20px;
+ 
+}
+.create-tip{
+  /* background-color: rgb(238, 223, 223); */
+  font-size: 14px;
+}
+
+.class-create-bar form{
+  margin-left: 64px;
+}
+.school,.section,.grade,.class-name,.class-type,.exit-permissions{
+  margin-top: 20px;
+}
+.school input,.class-name input{
+  width: 398px;
+  height: 34px;
+  line-height: 34px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+  margin-left: 29px;
+}
+.school input:hover ,
+.dropdown p:hover,
+.class-name input:hover{
+  box-shadow: 0 0 3px rgb(226, 206, 206);
+}
+.school input:focus,
+.class-name input:focus{
+  outline: none;
+  box-shadow: 0 0 3px rgb(226, 206, 206) inset;
+}
+ /*修改提示文字的颜色*/
+ .school input::-webkit-input-placeholder
+ ,.class-name input::-webkit-input-placeholder { 
+  color: #bbb;
+}
+
+.school input:-moz-placeholder,
+.class-nameinput:-moz-placeholder { 
+  color: #bbb;
+}
+
+.school input::-moz-placeholder ,
+.class-name  input::-moz-placeholder{ 
+color: #bbb;
+}
+
+.school input:-ms-input-placeholder ,
+.class-name  input:-ms-input-placeholder { 
+color: #bbb;
+}
+
+.school i,.section i,
+.grade i,.class-name i,
+.class-type i,
+.exit-permissions i {
+  display: inline-block;
+  width: 89px;
+  height: 36px;
+  line-height: 36px;
+  /* background-color: rgb(144, 183, 201); */
+  font-size: 14px;
+  color: #666;
+  text-align: right;
+  padding-right: 29px;
+}
+.school i span,.section i span,
+.grade i span,.class-name i span,
+.class-type i span,
+.exit-permissions i span{
+  color: #ff4242;
+  font-size: 14px;
+  margin-right: 11px;
+}
+
+
+
+/* 学校输入框小提示 */
+
+
+.school-tips,
+.course-tips{
+  height: 12px;
+  display: inline-block;
+  margin-left: 5px;
+  position: relative;
+}
+.school-tips p,
+.course-tips p{
+  display: inline-block;
+  font-size: 12px;
+  color: #ff4242;
+  margin-left: 17px;
+}
+.school-tips div,
+.course-tips div{
+  display: inline-block;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 3px;
+  line-height: 12px;
+  /* background-color: rgb(107, 77, 77); */
+  background-image: url(../img/false.png);
+}
+.course-tips-true div,
+.school-true-tips div{
+  background-image: url(../img/true.png);
+}
+.course-tips-true p,
+.school-true-tips p{
+  display:none;
+}
+.course-tips-hide,
+.school-tips-hide{
+  display: none;
+}
+
+
+/* 保存按钮 */
+.class-create-bar button{
+  width: 100px;
+  height: 36px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #3ba8f0;
+  border: none;
+  margin-left: 148px;
+  margin-top: 20px;
+}
+.class-create-bar button:hover{
+  background-color: #3697d8;
+  box-shadow: 0 0 12px inset #c2dcee;
+}
+.class-create-bar button:active{
+  background-color: #1b4c6c;
+  box-shadow: 0 0 12px inset #d1e3f0;
+}
+.class-create-bar button:focus{
+  outline: none;
+
+}
+
+
+/* 弹出框 */
+.confirm-Window{
+  /* width: 1999px;
+  height: 1000px; */
+  background-color: rgba(255, 255, 255, 0.658);
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  display: none;
+
+}
+.confirm-Window{
+
+}
+.confirm-body{
+  position: relative;
+  display: inline-block;
+  width: 400px;
+  height: 300px;
+  border: 1px    solid #b2d5e6;
+  margin-top: 200px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 1px #fff;
+  /* left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 0;
+  margin: auto; */
+
+  /* text-align: center; */
+}
+.confirm-content{
+  /* position: absolute; */
+  margin-top: 20%;
+  font-size: 20px;
+  color: #1b4c6c;
+}
+.btn-back,.btn-continue{
+  position: absolute;
+  width: 110px;
+  height: 40px;
+  line-height: 40px;
+  background-color: rgb(112, 151, 233);
+  text-decoration: none;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  bottom: 10%;
+  
+}
+.btn-back{
+  left: 10%;
+  
+}
+.btn-continue{
+right: 10%;
+}
+
+.btn-back:hover,.btn-continue:hover{  
+  background-color: rgb(133, 167, 240);
+  box-shadow: 0 0 3px inset #badef7;
+
+}
+.btn-back:active,.btn-continue:active{  
+  background-color: rgb(90, 139, 243);
+  box-shadow: 0 0 18px inset #031f4983;
+
+}

@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
 import { Link, Route, Switch } from 'react-router-dom'
+import PubSub from 'pubsub-js'
+// import axios from 'axios'
 
+import { request } from '../../../network/request'
 import ClassSynopsis from '../../../components/content/ClassSynopsis'
-import Detail from './Detail'
-import Create from './Create'
+import Detail from '../../../page/Set/Class/Detail'
+import Create from '../../../containers/Create'
 
 
 import './css/index.css'
@@ -12,13 +15,56 @@ export default class MyClass extends Component {
 
 
   state = {
-    classes: [
-      { id: '001', session: '高中-2013级', classes: '三年二班', headmaster: '田小雨', studCount: 31 },
-      { id: '002', session: '高中-2014级', classes: '三年二班', headmaster: '田小雨', studCount: 33 },
-      { id: '003', session: '高中-2015级', classes: '三年二班', headmaster: '田小雨', studCount: 34 },
-      { id: '004', session: '高中-2016级', classes: '三年二班', headmaster: '田小雨', studCount: 35 },
-    ]
+    classes: []
   }
+  // 组件加载完成
+  componentDidMount() {
+
+    // 订阅创建班级表单提交
+    this.createClassToken = PubSub.subscribe('createClass', (a, data) => {
+
+      const { section, grade, headmaster, classType } = data
+
+      // 向数据库添加一条数据
+      request({
+        method: 'POST',
+        url: '/classes',
+        data: {
+          section,
+          grade,
+          headmaster,
+          classType
+        }
+      }).then(res => {
+        console.log(res);
+        // 获取新的数据 刷新页面
+        this.getClassse()
+      }).catch(err => console.log(err))
+
+    })
+
+    // 获取classes数据
+    this.getClassse()
+
+  }
+
+  // 组件将要卸载
+  componentWillUnmount() {
+    // 取消订阅
+    PubSub.unsubscribe(this.createClassToken)
+  }
+
+  // 二次封装axios
+  getClassse = () => {
+    request({
+      method: 'GET',
+      url: '/classes'
+    }).then(res => {
+      // console.log(res);
+      this.setState({ classes: res })
+    }).catch(err => { console.log(err); })
+  }
+
 
 
   render() {
@@ -33,7 +79,7 @@ export default class MyClass extends Component {
           <div className="route-title">
             <h2 >我的班级</h2>
           </div>
-          <Link to='/class/create' ><button  className='creat-class'>创建班级</button></Link>
+          <Link to='/class/create' ><button className='creat-class'>创建班级</button></Link>
           {/* <button className='join-class'>加入班级</button> */}
         </div>
         <div className="class-totall-bar">
@@ -42,12 +88,17 @@ export default class MyClass extends Component {
 
           <div className="class-bar">
             {
+
               classes.map((classesObj) => {
-                return (
-                  <Link to={`/class/detail/${classesObj.id}`} key={classesObj.id}  >
+                if (classesObj.classType === '行政班') {
+                  return (<Link to={`/class/${classesObj.id}`} key={classesObj.id}  >
                     < ClassSynopsis  {...classesObj} />
-                  </Link>
-                )
+                  </Link>)
+                } else {
+                  return []
+                }
+
+
               })
 
             }
@@ -57,11 +108,14 @@ export default class MyClass extends Component {
           <div className="class-bar">
             {
               classes.map((classesObj) => {
-                return (
-                  <Link to={`/class/detail/${classesObj.id}`} key={classesObj.id}  >
+                if (classesObj.classType === '教学班') {
+                  // console.log(classesObj.id);
+                  return (<Link to={`/class/${classesObj.id}`} key={classesObj.id}  >
                     < ClassSynopsis  {...classesObj} />
-                  </Link>
-                )
+                  </Link>)
+                } else {
+                  return []
+                }
               })
 
             }
@@ -70,7 +124,7 @@ export default class MyClass extends Component {
         </div>
         <Switch>
           <Route path='/class/create' component={Create}></Route>
-          <Route path={`/class/detail/:id`} component={Detail}></Route>
+          <Route path={`/class/:id`} component={Detail}></Route>
         </Switch>
       </div>
     )

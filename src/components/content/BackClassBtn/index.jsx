@@ -7,13 +7,13 @@ import './css/index.css'
    
   backlCass = () => {
     const { push } = this.props.history
-    push('/class/detail')
+    push('/class')
   }
   
   render() {
     return (
       <div>
-        <button className='back-myclass-btn' onClick={this.backlCass}>放回上一级</button>
+        <button className='back-myclass-btn' onClick={this.backlCass}>返回上一级</button>
       </div>
     )
   }
