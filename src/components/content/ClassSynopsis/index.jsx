@@ -1,11 +1,5 @@
 import React, { Component } from 'react'
-import axios from 'axios'
-// import { classDetail } from '../../../redux/actions/classSynopsis'
-// import store from '../../../redux/store'
-// import PubSub from 'pubsub-js'
-// import PubSub from 'pubsub-js'
-// import ReactDOM from 'react-dom'
-
+import { request } from '../../../network/request'
 import './css/index.css'
 export default class ClassSynopsis extends Component {
 
@@ -16,44 +10,17 @@ export default class ClassSynopsis extends Component {
   }
 
   componentDidMount() {
-    // console.log(this.props);
-    // const { classDetail } = this.props
 
     const id = this.props.id
-    // axios.get(`http://localhost:3001/classes/${id}`, {
-    //   // params:{id:id}
-    // }).then(res => {
-    //   console.log(res.data);
-    //   this.setState({})
-    // })
-    // new Promise((resolve, reject) => {
-    //   axios.get(`http://localhost:3001/classes/${id}/students`)
-    //   resolve(data)
-    // }).then(res => {
-    //   console.log(res);
-    // })
-    axios.get(`http://localhost:3001/classes/${id}/students`).then(res => {
-      // console.log(res.data);
-      this.setState({ students: res.data })
-
+    request({
+      method: 'GET',
+      url: `/classes/${id}/students`,
+    }).then(res => {
+      this.setState({ students: res })
     })
-
-
-
-    // const { classDetail, parents, students, teachers, headmaster } = this.props
-    // const data = { parents, students, teachers, headmaster }
-    // classDetail(data)
-  }
-  showClassMenber = () => {
-    // console.log(this.props);
-    // const { classDetail, parents, students, teachers, headmaster } = this.props
-    // const data = { parents, students, teachers, headmaster }
-    // classDetail(data)
-
   }
 
   render() {
-    // console.log(this.props);
     const { students } = this.state
     const { section, grade, headmaster, classType } = this.props
     return (
@@ -66,7 +33,6 @@ export default class ClassSynopsis extends Component {
           <p><i>学生：</i><span>{students.length || 0}人</span></p>
         </div>
         <button className='class-details-btn'>{classType}</button>
-
 
       </div>
     )

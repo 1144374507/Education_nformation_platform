@@ -4,8 +4,6 @@ import { NavLink, Route, Switch, Redirect } from 'react-router-dom'
 
 import Class from '../../../page/Set/Class'
 import Hello from '../../../page/Set/Hello'
-// import Detail from '../../../page/Set/Class/'
-
 
 import './css/contenter.css'
 

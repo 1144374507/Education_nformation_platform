@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { nanoid } from 'nanoid'
-import axios from 'axios'
+
+import PubSub from 'pubsub-js'
 
 import MessageCar from '../../../../../components/content/MessageCar'
 
@@ -12,19 +13,16 @@ export default class Studens extends Component {
   }
 
   componentDidMount() {
-    console.log(this);
-    const { id } = this.props.match.params
-    axios.get(`http://localhost:3001/classes/${id}/students`).then(res => {
-      // console.log(res.data);
-      this.setState({ students: res.data })
-
+    this.token = PubSub.subscribe('pubStudents', (_, data) => {
+      this.setState({ students: data })
     })
+  }
+  componentWillUnmount() {
+    PubSub.unsubscribe(this.token)
   }
 
   render() {
     const { students } = this.state
-    // const { students } = this.props.classDetail
-    // console.log(this.props);
     return (
       <div className='class-detail-message'>
         {

@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
 import { nanoid } from 'nanoid'
-import axios from 'axios'
+// import axios from 'axios'
 
 // import store from '../../../../../redux/store'
-// import PubSub from 'pubsub-js'
+import PubSub from 'pubsub-js'
 // import PubSub from 'pubsub-js'
 
 import SearchTeacher from '../../../../../components/content/SearchTeacher'
@@ -20,28 +20,24 @@ export default class Teachers extends Component {
   }
 
   componentDidMount() {
-    // console.log(this);
-    const { id } = this.props.match.params
-    axios.get(`http://localhost:3001/classes/${id}/teachers`).then(res => {
-      // console.log(res.data);
-      this.setState({ teachers: res.data })
-      axios.get(`http://localhost:3001/classes/${id}`).then(res => {
-        // console.log(res.data);
-        this.setState({ classes: res.data })
-
-      })
+    this.token = PubSub.subscribe('pubTeachers', (_, data) => {
+      this.setState({ teachers: data })
     })
+    this.token2 = PubSub.subscribe('chooceCourse', (_, data) => {
+      const teachersARR = this.props.classMember.teachers.filter(array => JSON.stringify(array).indexOf(data) > -1)
+      this.setState({ teachers: teachersARR })
+    })
+
   }
 
-  // componentWillUnmount() {
-  //   // console.log('dasdsadsa');
-  //   // PubSub.unsubscribe(this.token11)
-  // }
-
+  componentWillUnmount() {
+    // console.log('dasdsadsa');
+    PubSub.unsubscribe(this.token)
+    PubSub.unsubscribe(this.token2)
+  }
 
   render() {
-    // console.log(store.getState());
-    // console.log(this.props);
+
     const { classes: { headmaster }, teachers } = this.state
     return (
       <div>
@@ -57,11 +53,7 @@ export default class Teachers extends Component {
               return <MessageCar key={nanoid()}  {...teacherobj} ></MessageCar>
             })
           }
-
-
-
         </div>
-
       </div>
     )
   }

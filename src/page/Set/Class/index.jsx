@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
 import { Link, Route, Switch } from 'react-router-dom'
 import PubSub from 'pubsub-js'
-// import axios from 'axios'
 
 import { request } from '../../../network/request'
 import ClassSynopsis from '../../../components/content/ClassSynopsis'
-import Detail from '../../../page/Set/Class/Detail'
+import Detail from '../../../containers/Detail'
 import Create from '../../../containers/Create'
-
 
 import './css/index.css'
 
@@ -24,16 +22,12 @@ export default class MyClass extends Component {
     this.createClassToken = PubSub.subscribe('createClass', (a, data) => {
 
       const { section, grade, headmaster, classType } = data
-
       // 向数据库添加一条数据
       request({
         method: 'POST',
         url: '/classes',
         data: {
-          section,
-          grade,
-          headmaster,
-          classType
+          section, grade, headmaster, classType
         }
       }).then(res => {
         console.log(res);
@@ -42,10 +36,8 @@ export default class MyClass extends Component {
       }).catch(err => console.log(err))
 
     })
-
     // 获取classes数据
     this.getClassse()
-
   }
 
   // 组件将要卸载
@@ -65,13 +57,8 @@ export default class MyClass extends Component {
     }).catch(err => { console.log(err); })
   }
 
-
-
   render() {
-    // console.log(this);
-
     const { classes } = this.state
-
     return (
       <div>
         {/* 顶部导航 */}
@@ -85,10 +72,8 @@ export default class MyClass extends Component {
         <div className="class-totall-bar">
           <h3>行政班是为学生管理和教学管理而建设的班级</h3>
 
-
           <div className="class-bar">
             {
-
               classes.map((classesObj) => {
                 if (classesObj.classType === '行政班') {
                   return (<Link to={`/class/${classesObj.id}`} key={classesObj.id}  >
@@ -97,10 +82,7 @@ export default class MyClass extends Component {
                 } else {
                   return []
                 }
-
-
               })
-
             }
           </div>
 
@@ -117,9 +99,7 @@ export default class MyClass extends Component {
                   return []
                 }
               })
-
             }
-
           </div>
         </div>
         <Switch>
