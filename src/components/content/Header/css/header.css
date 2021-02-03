@@ -26,7 +26,8 @@
 }
 .logo .title{
   position: absolute;
-  background: url(../img/title.png);
+  /* background: url(../img/title.png); */
+  background: url('../img/header_sprites.png') -1px -1px;
   width: 193px;
   height: 57px;
   right: 0;
@@ -86,14 +87,16 @@
   /* background-color: #000; */
 }
 .new-bg{
+  width: 52px; height: 20px;
   display: inline-block;
   font-size: 12px;
   text-decoration: none;
   color: #ffffff;
-  background-image: url(../img/nwe.png);
+  background: url('../img/header_sprites.png') -43px -60px;
+  /* background-image: url(../img/nwe.png); */
   background-repeat: no-repeat;
-  width: 58px;
-  height: 20px;
+  /* width: 58px;
+  height: 20px; */
   line-height: 20px;
   padding-left: 4px;
   margin-top: 21px;
@@ -108,7 +111,8 @@
 .header-serch{
   width: 20px;
   height: 20px;
-  background-image: url(../img/search-bg-img.png);
+  background: url('../img/header_sprites.png')  -101px -60px;
+  /* background-image: url(../img/search-bg-img.png); */
   background-repeat: no-repeat;
   padding: 0;
   position: absolute;

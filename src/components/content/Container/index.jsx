@@ -1,13 +1,15 @@
-import React, { Component } from 'react'
+import React, { PureComponent, lazy, Suspense } from 'react'
 import { NavLink, Route, Switch, Redirect } from 'react-router-dom'
 
-
-import Class from '../../../page/Set/Class'
-import Hello from '../../../page/Set/Hello'
+import Loading from '../../../page/Loading'
 
 import './css/contenter.css'
 
-export default class Container extends Component {
+
+const Class = lazy(() => import('../../../page/Set/Class'))
+const Hello = lazy(() => import('../../../page/Set/Hello'))
+
+export default class Container extends PureComponent {
   render() {
     return (
       <div>
@@ -30,16 +32,17 @@ export default class Container extends Component {
           </div>
 
           <div className="contenter-right-bar">
-            <Switch>
-              <Route path='/hello1' component={Hello} ></Route>
-              <Route path='/hello2' component={Hello}></Route>
-              <Route path='/class' component={Class}></Route>
-              <Route path='/hello3' component={Hello}></Route>
-              {/* <Route path='/class/detail/001' component={Detail}></Route> */}
+            <Suspense fallback={<Loading />}>
+              <Switch>
+                <Route path='/hello1' component={Hello} ></Route>
+                <Route path='/hello2' component={Hello}></Route>
+                <Route path='/class' component={Class}></Route>
+                <Route path='/hello3' component={Hello}></Route>
+                {/* <Route path='/class/detail/001' component={Detail}></Route> */}
 
-              <Redirect to='/class'></Redirect>
-            </Switch>
-
+                <Redirect to='/class'></Redirect>
+              </Switch>
+            </Suspense>
           </div>
         </div>
       </div>

@@ -65,8 +65,8 @@
       "classType": "教学班"
     },
     {
-      "section": "小学",
-      "grade": "一年级",
+      "section": "初中",
+      "grade": "三年级",
       "headmaster": "田小雨",
       "classType": "行政班",
       "id": 5
@@ -79,39 +79,11 @@
       "id": 6
     },
     {
-      "section": "小学",
+      "section": "高中",
       "grade": "一年级",
       "headmaster": "田小雨",
-      "classType": "行政班",
+      "classType": "教学班",
       "id": 7
-    },
-    {
-      "section": "小学",
-      "grade": "一年级",
-      "headmaster": "田小雨",
-      "classType": "行政班",
-      "id": 8
-    },
-    {
-      "section": "小学",
-      "grade": "二年级",
-      "headmaster": "田小雨",
-      "classType": "行政班",
-      "id": 9
-    },
-    {
-      "section": "小学",
-      "grade": "二年级",
-      "headmaster": "田小雨",
-      "classType": "行政班",
-      "id": 10
-    },
-    {
-      "section": "小学",
-      "grade": "二年级",
-      "headmaster": "田小雨",
-      "classType": "行政班",
-      "id": 11
     }
   ],
   "teachers": [
@@ -382,42 +354,6 @@
       "name": "张三",
       "searchkey": "zhangsang zs",
       "classId": 4
-    },
-    {
-      "classId": "1",
-      "id": 5
-    },
-    {
-      "classId": "4",
-      "id": 6
-    },
-    {
-      "classId": "2",
-      "id": 7
-    },
-    {
-      "classId": "3",
-      "id": 8
-    },
-    {
-      "classId": "5",
-      "id": 9
-    },
-    {
-      "classId": "6",
-      "id": 10
-    },
-    {
-      "classId": "7",
-      "id": 11
-    },
-    {
-      "classId": "8",
-      "id": 12
-    },
-    {
-      "classId": "9",
-      "id": 13
     }
   ],
   "parents": [

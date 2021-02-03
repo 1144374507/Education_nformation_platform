@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 
 import {withRouter} from 'react-router-dom'
 
 import './css/index.css'
- class BackClassBtn extends Component {
+ class BackClassBtn extends PureComponent {
    
   backlCass = () => {
     const { push } = this.props.history

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { Link, Route, Switch } from 'react-router-dom'
 import PubSub from 'pubsub-js'
 
@@ -9,7 +9,7 @@ import Create from '../../../containers/Create'
 
 import './css/index.css'
 
-export default class MyClass extends Component {
+export default class MyClass extends PureComponent {
 
 
   state = {
@@ -30,7 +30,7 @@ export default class MyClass extends Component {
           section, grade, headmaster, classType
         }
       }).then(res => {
-        console.log(res);
+        // console.log(res);
         // 获取新的数据 刷新页面
         this.getClassse()
       }).catch(err => console.log(err))
@@ -74,31 +74,23 @@ export default class MyClass extends Component {
 
           <div className="class-bar">
             {
-              classes.map((classesObj) => {
-                if (classesObj.classType === '行政班') {
-                  return (<Link to={`/class/${classesObj.id}`} key={classesObj.id}  >
+              classes.map(classesObj =>
+                classesObj.classType === '行政班' ?
+                  <Link to={`/class/${classesObj.id}`} key={classesObj.id}  >
                     < ClassSynopsis  {...classesObj} />
-                  </Link>)
-                } else {
-                  return []
-                }
-              })
+                  </Link> : []
+              )
             }
           </div>
 
           <h3>教学班是根据教学要求而设置的班级</h3>
           <div className="class-bar">
             {
-              classes.map((classesObj) => {
-                if (classesObj.classType === '教学班') {
-                  // console.log(classesObj.id);
-                  return (<Link to={`/class/${classesObj.id}`} key={classesObj.id}  >
-                    < ClassSynopsis  {...classesObj} />
-                  </Link>)
-                } else {
-                  return []
-                }
-              })
+              classes.map(classesObj => classesObj.classType === '教学班' ?
+                <Link to={`/class/${classesObj.id}`} key={classesObj.id}  >
+                  < ClassSynopsis  {...classesObj} />
+                </Link> : []
+              )
             }
           </div>
         </div>

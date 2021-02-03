@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PubSub from 'pubsub-js'
 
 import {
@@ -10,7 +10,7 @@ import SingleBox from '../../../../containers/SingleBox'
 import DropDowm from '../../../../containers/DropDowm'
 import './css/index.css'
 
-export default class CreateClass extends Component {
+export default class CreateClass extends PureComponent {
 
   state = {
     newClass: { students: 0, headmaster: '田小雨', },
@@ -18,7 +18,8 @@ export default class CreateClass extends Component {
     classIstrue: false,//课程inpt框输入内容是否合法
     display: '',
     width: '',
-    height: ''
+    height: '',
+    hasError: ''
   }
 
   // ref 容器
@@ -27,7 +28,17 @@ export default class CreateClass extends Component {
   classRef = React.createRef()
   classChildRef = React.createRef()
 
-  
+
+  //当子组件出现报错时候，会触发getDerivedStateFromError调用，并携带错误信息
+  static getDerivedStateFromError(error) {
+    return { hasError: error }
+  }
+
+  componentDidCatch() {
+    console.log('此处统计错误，反馈给服务器，用于通知编码人员进行bug的解决');
+  }
+
+
   // school onChange的回调
   schoolInptChange = () => {
     const {
@@ -217,13 +228,19 @@ export default class CreateClass extends Component {
               {/* 选择选段 */}
               <div className="section">
                 <i><span>*</span>学段</i>
-                <DropDowm data={section} pubName='sectionValue' liValue='section' />
+                {
+                  this.state.hasError ? <h2>当前网络不稳定，稍后再试</h2> : <DropDowm data={section} pubName='sectionValue' liValue='section' />
+                }
+
               </div>
 
               {/* 选择年级 */}
               <div className="grade">
                 <i><span>*</span>年级</i>
-                <DropDowm data={grade} pubName='gradeValue' liValue='grade' />
+                {
+                  this.state.hasError ? <h2>当前网络不稳定，稍后再试</h2> : <DropDowm data={grade} pubName='gradeValue' liValue='grade' />
+                }
+
               </div>
 
               {/* 输入班级名 */}
@@ -235,13 +252,20 @@ export default class CreateClass extends Component {
               {/* 选择类型 */}
               <div className='class-type'>
                 <i>类型</i>
-                <SingleBox data={classType} singleBoxName='classType' />
+                {
+                  this.state.hasError ? <h2>当前网络不稳定，稍后再试</h2> : <SingleBox data={classType} singleBoxName='classType' />
+                }
+
               </div>
 
               {/* 退出权限设置 */}
               <div className='exit-permissions'>
                 <i>退出权限设置</i>
-                <SingleBox data={exitPermissions} singleBoxName='exitPermissions' />
+                {
+                  this.state.hasError ? <h2>当前网络不稳定，稍后再试</h2> : <SingleBox data={exitPermissions} singleBoxName='exitPermissions' />
+                }
+
+
               </div>
               {/* 保存按钮 */}
               <button onClick={saveData}>保存</button>

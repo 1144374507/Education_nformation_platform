@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PubSub from 'pubsub-js'
 
 import './css/index.css'
 
-export default class SearchTeacher extends Component {
+export default class SearchTeacher extends PureComponent {
 
   chooceCourse = (e) => {
     PubSub.publish('chooceCourse', e.target.innerText)

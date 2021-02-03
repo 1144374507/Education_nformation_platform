@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { request } from '../../../network/request'
 import './css/index.css'
-export default class ClassSynopsis extends Component {
+export default class ClassSynopsis extends PureComponent {
 
   state = {
     students: [],
@@ -16,6 +16,7 @@ export default class ClassSynopsis extends Component {
       method: 'GET',
       url: `/classes/${id}/students`,
     }).then(res => {
+      // console.log(res);
       this.setState({ students: res })
     })
   }
@@ -33,7 +34,7 @@ export default class ClassSynopsis extends Component {
           <p><i>学生：</i><span>{students.length || 0}人</span></p>
         </div>
         <button className='class-details-btn'>{classType}</button>
-
+        <div className='class-detail-setting'></div>
       </div>
     )
   }

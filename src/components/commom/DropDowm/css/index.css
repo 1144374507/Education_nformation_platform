@@ -34,11 +34,11 @@
   position: absolute;
   top: 13px;
   right: 10px;
-  background-image: url(../img/dropdowm_down.png);
+  background: url('../img/dropDowm.png') -1px -1px;
 }
 
 .dropdown-icon-active{
-  background-image: url(../img/dropdowm_up.png);
+  background: url('../img/dropDowm.png') -15px -1px;
 }
 
 .dropdown-ul {

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import PubSub from 'pubsub-js'
 
@@ -10,7 +10,7 @@ import {
 
 import './css/index.css'
 
-export default class DropDowm extends Component {
+export default class DropDowm extends PureComponent {
 
   static propTypes = {
     pubName: PropTypes.string,//pubsub 订阅-发布 的事件名
@@ -28,13 +28,13 @@ export default class DropDowm extends Component {
 
   //生命周期函数 初始化 title
   componentDidMount() {
-    const data = this.props.data || this.props.data1
+    const data = this.props.data 
     this.setState({ title: `请选择${data[0]}` })
   }
 
   // 点击 p 标签 展示 ul 下拉框
   showDRopDowmList = (event) => {
-    const data = this.props.data || this.props.data1
+    const data = this.props.data 
     const { childNodes } = event.target
     const { dropDowmList, state: { lisHeightCount } } = this
     toggleClass(dropDowmList, 'dropdown-ul-active')
@@ -104,45 +104,8 @@ export default class DropDowm extends Component {
     }
   }
 
-
-
-  // // 添加class
-  // addClass = (obj, cn) => {
-  //   // 检查是否有cn
-  //   if (!this.hasClass(obj, cn)) {
-  //     obj.className += " " + cn
-  //   }
-  // }
-  // // 检查是否有cn
-  // hasClass = (obj, cn) => {
-  //   const reg = new RegExp("\\b" + cn + "\\b")
-  //   return reg.test(obj.className);
-  // }
-  // // 删除class
-  // deleClass = (obj, cn) => {
-  //   // 查找是否存在
-  //   const reg1 = new RegExp("\\b" + cn + "\\b", "ig");
-  //   // console.log(reg1);
-  //   //删除class
-  //   obj.className = obj.className.replace(reg1, "");
-  // }
-  // /*
-  //  * toggleClass 可以用来切换一个类
-  //  * 	如果元素中具有该类，则删除
-  //  * 	如果元素中没有该类，则添加
-  //  */
-  // toggleClass = (obj, cn) => {
-  //   //判断obj中是否含有cn
-  //   if (this.hasClass(obj, cn)) {
-  //     //有，则删除
-  //     this.deleClass(obj, cn);
-  //   } else {
-  //     //没有，则添加
-  //     this.addClass(obj, cn);
-  //   }
-  // }
   render() {
-    const data = this.props.data || this.props.data1
+    const data = this.props.data 
     const { showDRopDowmLi, showDRopDowmList, state: { title, lisHeightCount }, mouseleaveUL, onMouseEnterUl, mouseleaveP } = this
     return (
       <div className="dropdown">

@@ -1,4 +1,4 @@
-import React, { Component, lazy, Suspense } from 'react'
+import React, { PureComponent, lazy, Suspense } from 'react'
 import { NavLink, Route, Switch, Redirect } from 'react-router-dom'
 import PubSub from 'pubsub-js'
 
@@ -7,10 +7,11 @@ import { request } from '../../../../network/request'
 import BackClassBtn from '../../../../components/content/BackClassBtn'
 import './css/index.css'
 
+import Loading from '../../../Loading'
 const Teachers = lazy(() => import('../../../../containers/Detail/Teachers'))
 const Studens = lazy(() => import('../../../../page/Set/Class/Detail/Studens'))
 const Parents = lazy(() => import('../../../../page/Set/Class/Detail/Parents'))
-export default class ClassDetail extends Component {
+export default class ClassDetail extends PureComponent {
 
   state = {
     students: [],
@@ -132,7 +133,7 @@ export default class ClassDetail extends Component {
             <NavLink to={`/class/${id}/parents`} activeClassName="class-detail-li-active"><li onClick={this.putMessageClick}>所有家长 ( {parents.length} )</li></NavLink>
           </ul>
           {/* 路由懒加载 */}
-          <Suspense fallback={<h2> looding.....</h2 >}>
+          <Suspense fallback={<Loading></Loading>}>
             <Switch>
               <Route path={`/class/:id/teacher`} component={Teachers} ></Route>
               <Route path={`/class/:id/studens`} component={Studens}></Route>

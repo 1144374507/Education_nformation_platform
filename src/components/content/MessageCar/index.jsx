@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 
 import teacheravatar from "./img/teacher_avatar.png"
 
 import './css/index.css'
-export default class MessgeCar extends Component {
+export default class MessgeCar extends PureComponent {
   render() {
     const { name } = this.props
     return (

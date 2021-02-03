@@ -117,12 +117,11 @@ color: #bbb;
   height: 12px;
   top: 3px;
   line-height: 12px;
-  /* background-color: rgb(107, 77, 77); */
-  background-image: url(../img/false.png);
+  background: url('../img/tips_sprites.png') -1px -1px;
 }
 .course-tips-true div,
 .school-true-tips div{
-  background-image: url(../img/true.png);
+  background: url('../img/tips_sprites.png') -1px -15px;
 }
 .course-tips-true p,
 .school-true-tips p{

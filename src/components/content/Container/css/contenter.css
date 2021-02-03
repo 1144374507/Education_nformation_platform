@@ -21,11 +21,11 @@
   width: 32px;
   height: 55px;
   background-color: #fff;
-  background-image:url(../img/back.png);
+  background: url('../img/container_sprites.png') -1px -58px;
   border: none;
 }
 .back:hover{
-  background-image:url(../img/back_hover.png);
+  background: url('../img/container_sprites.png')  -69px -58px;
 
 }
 .back:focus{
@@ -33,7 +33,7 @@
   
 }
 .back:active{
-  background-image:url(../img/back_avtive.png);
+  background: url('../img/container_sprites.png')  -35px -58px;
 
 }
 
@@ -54,14 +54,14 @@
 .personal-center-right{
   width: 47px;
   height: 55px;
-  background-image: url(../img/rectangular.png);
+  background: url('../img/container_sprites.png')  -1px -1px;
   float: right;
 }
 .personal-center-right:hover{
-  background-image: url(../img/rectangular_hover.png);
+  background: url('../img/container_sprites.png')  -99px -1px;
 }
 .personal-center-right:active{
-  background-image: url(../img/rectangular_fouce.png);
+  background: url('../img/container_sprites.png')  -50px -1px;
 }
 .nav-ul a{
   font-size: 14px;
@@ -86,36 +86,33 @@
   display: inline-block;
   width: 16px;
   height: 16px;
-  background-position-y: 2px;
-  background-repeat: no-repeat;
-  background-size: contain;
   margin-right: 20px;
   margin-left: 27px;
 }
 .others-bg-img{
-  background-image: url(../img/others.png) ;
+  background: url('../img/container_sprites.png')  -103px -94px;
 }
 
 .active .others-bg-img{
-  background-image: url(../img/others_active.png) ;
+  background: url('../img/container_sprites.png')  -121px -94px;
 }
 .home-bg-img{
-  background-image: url(../img/Home.png) ;
+  background: url('../img/container_sprites.png')  -103px -76px;
 }
 .active .home-bg-img{
-  background-image: url(../img/Home_avtive.png) ;
+  background: url('../img/container_sprites.png')  -121px -76px;
 }
 .class-bg-img{
-  background-image: url(../img/class.png) ;
+  background: url('../img/container_sprites.png')  -103px -58px;
 }
 .active .class-bg-img{
-  background-image: url(../img/class_active.png) ;
+  background: url('../img/container_sprites.png')  -121px -58px;
 }
 .time-bg-img{
-  background-image: url(../img/time.png) ;
+  background: url('../img/container_sprites.png')  -1px -115px;
 }
 .active .time-bg-img{
-  background-image: url(../img/time_active.png) ;
+  background: url('../img/container_sprites.png')  -19px -115px;
 }
 
 /* NavLink 激活 样式 */

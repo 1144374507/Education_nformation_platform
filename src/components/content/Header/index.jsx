@@ -1,11 +1,32 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 
 import './css/header.css'
 import logo from './img/logo.png'
 import userAvatar from './img/avatar/avatar_normal.png'
+import userAvatarHover from './img/avatar/avatar_hover.png'
+import userAvatarActive from './img/avatar/avatar_active.png'
 
-export default class Header extends Component {
-  
+export default class Header extends PureComponent {
+
+  state = {
+    url: userAvatar
+  }
+
+  // 用户头像点击设置
+  enterAvatar = () => {
+    this.setState({ url: userAvatarHover })
+  }
+  leaveAvatar = () => {
+    this.setState({ url: userAvatar })
+  }
+
+  mouseUp = () => {
+    this.setState({ url: userAvatarHover })
+  }
+  mouseDown = (e) => {
+    this.setState({ url: userAvatarActive })
+  }
+
   render() {
     return (
       // 头部导航条
@@ -25,7 +46,7 @@ export default class Header extends Component {
           {/* 路由按钮 */}
           <div className="route-link-div" >
             <a className="route-link" href="/#">首页</a>
-            <a className="route-link" href="/#" style={{color:'#3ba8f0'}}>教学管理</a>
+            <a className="route-link" href="/#" style={{ color: '#3ba8f0' }}>教学管理</a>
             <a className="route-link" href="/#">学习</a>
             <a className="route-link" href="/#">资源超市</a>
             <a className="route-link" href="/#">教育应用</a>
@@ -40,15 +61,15 @@ export default class Header extends Component {
         </div>
         {/* 用户登录 */}
         <div className="user-bar">
-            <div className='user-avatar'>
-              <img src={userAvatar} alt="userAvatar" />
-            </div> 
-            <span className='user-name'>Coco</span>
+          <div className='user-avatar'>
+            <img onMouseEnter={this.enterAvatar} onMouseLeave={this.leaveAvatar} onMouseUp={this.mouseUp} onMouseDown={this.mouseDown} src={this.state.url} alt="userAvatar" />
+          </div>
+          <span className='user-name'>Coco</span>
         </div>
-      
+
       </div>
-      
-    
+
+
     )
   }
 }

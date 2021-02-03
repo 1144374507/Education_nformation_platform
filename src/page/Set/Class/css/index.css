@@ -19,15 +19,15 @@ float: right;
 width: 100px;
 height: 35px;
 border: none;
-background-image: url(../img/btn.png);
+background: url('../img/btn_sprites.png') -1px -1px;
 color: #fff;
 }
 .creat-class:hover{
-background-image: url(../img/btn_hover.png);
+  background: url('../img/btn_sprites.png') -1px -75px;
 
 }
 .creat-class:active{
-background-image: url(../img/btn_active.png);
+  background: url('../img/btn_sprites.png') -1px -38px;
 }
 .creat-class:focus{
 outline: none;
