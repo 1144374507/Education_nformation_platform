@@ -116,5 +116,39 @@
   border-left: none;
 }
 
+@media screen and (max-width:800px){
+  
+.contenter-right-bar{
+  position: relative;
+  width: 700px;
+}
+.class-detail-totabar{
+  width: 700px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  /* height: 500px; */
+
+  top: 0;
+}
+
+
+/* 班级信息容器 */
+.class-detail-bar{
+  width: 700px;
+  height: 697px;
+  /* background-color: rgb(149, 238, 161); */
+  border: 1px solid #ddd;
+}
+/* 搜索框 bar*/
+.class-metail-search{
+  width: 250px;
+}
+/* 搜索框 */
+.class-metail-search input{
+  width: 194px;
+}
+
+}
+
 
 

@@ -24,10 +24,10 @@ export default class Container extends PureComponent {
             </div>
             {/* 导航列表 */}
             <ul className='nav-ul' >
-              <NavLink to='/hello1' > <li className='nav-list'><i className='home-bg-img'></i>其他内容</li> </NavLink>
-              <NavLink to='/hello2' > <li className='nav-list'><i className='others-bg-img'></i>其他内容</li> </NavLink>
-              <NavLink to='/class' > <li className='nav-list'><i className='class-bg-img'></i>我的班级</li> </NavLink>
-              <NavLink to='/hello3' > <li className='nav-list'><i className='time-bg-img'></i>其他内容</li> </NavLink>
+              <NavLink to='/hello1' > <li className='nav-list'><i className='home-bg-img'></i><span>其他内容</span></li> </NavLink>
+              <NavLink to='/hello2' > <li className='nav-list'><i className='others-bg-img'></i><span>其他内容</span></li> </NavLink>
+              <NavLink to='/class' > <li className='nav-list'><i className='class-bg-img'></i><span>我的班级</span></li> </NavLink>
+              <NavLink to='/hello3' > <li className='nav-list'><i className='time-bg-img'></i><span>其他内容</span></li> </NavLink>
             </ul>
           </div>
 

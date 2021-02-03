@@ -63,27 +63,6 @@
       "headmaster": "田小雨",
       "teacherId": 4,
       "classType": "教学班"
-    },
-    {
-      "section": "初中",
-      "grade": "三年级",
-      "headmaster": "田小雨",
-      "classType": "行政班",
-      "id": 5
-    },
-    {
-      "section": "小学",
-      "grade": "二年级",
-      "headmaster": "田小雨",
-      "classType": "行政班",
-      "id": 6
-    },
-    {
-      "section": "高中",
-      "grade": "一年级",
-      "headmaster": "田小雨",
-      "classType": "教学班",
-      "id": 7
     }
   ],
   "teachers": [

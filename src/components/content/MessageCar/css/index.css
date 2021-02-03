@@ -74,5 +74,13 @@
 }
  .detail-message:hover .personal-profile{
   display: block;
-  z-index: 9;
+  z-index:6;
+}
+@media screen and (max-width:800px){
+  
+
+/* 班级信息 */
+.class-detail-message{
+  width: 700px;
+}
 }

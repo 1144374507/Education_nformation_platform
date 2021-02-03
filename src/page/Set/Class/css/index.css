@@ -52,4 +52,28 @@ padding-top: 20px;
 margin-bottom: 18px;
 font-size: 14px;
 }
+@media screen and (max-width:800px){
+  /* contenter 顶部导航栏 */
+.contenter-top-nav-bar{
+  width: 700px;
+}
+
+
+
+
+.class-bar{
+width: 700px;
+
+}
+.class-details{
+  width: 300px;
+  background: none;
+  border: 1px solid rgb(212, 231, 240);
+
+
+}
+.creat-class ,.back-myclass-btn{
+  margin-right: 80px;
+}
+}
 

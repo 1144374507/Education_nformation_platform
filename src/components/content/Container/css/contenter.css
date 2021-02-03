@@ -4,6 +4,7 @@
   height: 980px;
   margin: 0 auto;
 }
+
 /* 内容区 左侧导航栏 */
 .contenter-left-nav-bar{
   width: 240px;
@@ -133,4 +134,57 @@
   width: 1138px;
   height: 980px;
   float: right;
+}
+
+/* 设置断点 */
+@media screen and (max-width:800px){
+ 
+.contenter-bar{
+  width: 800px;
+}
+/* 内容区 左侧导航栏 */
+.contenter-left-nav-bar{
+  width: 80px;
+  height: 980px;
+  float: left;
+}
+/* 个人中心 */
+.personal-center-bar{
+  width: 80px;
+  height: 55px;
+  position: relative;
+}
+
+
+.contenter-left-nav-bar{
+  border-right: 1px solid #999999;
+}
+
+/* 个人中心Text */
+.personal-center{
+  display: none;
+}
+
+.personal-center-right{
+  width: 47px;
+  height: 55px;
+  float: right;
+}
+
+.nav-list{
+  width: 80px;
+  height: 60px;
+  line-height: 60px;
+}
+.nav-list span{
+  display: none;
+}
+/* NavLink 激活 样式 */
+.active li{
+  background-color: #f4f5f5;
+  width: 77px;
+
+  color: #3ba8f0;
+  border-left: 3px solid #3ba8f0;
+} 
 }

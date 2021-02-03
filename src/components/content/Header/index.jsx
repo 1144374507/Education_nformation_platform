@@ -45,8 +45,8 @@ export default class Header extends PureComponent {
           </div>
           {/* 路由按钮 */}
           <div className="route-link-div" >
-            <a className="route-link" href="/#">首页</a>
             <a className="route-link" href="/#" style={{ color: '#3ba8f0' }}>教学管理</a>
+            <a className="route-link" href="/#">首页</a>
             <a className="route-link" href="/#">学习</a>
             <a className="route-link" href="/#">资源超市</a>
             <a className="route-link" href="/#">教育应用</a>
