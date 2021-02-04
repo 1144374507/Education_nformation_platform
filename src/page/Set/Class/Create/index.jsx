@@ -101,7 +101,7 @@ export default class CreateClass extends PureComponent {
       deleClass(classChildRef.current, 'course-tips-hide')
       setClassValue({ course: value })//表单验证 错误名称
       this.setState({ classIstrue: false })
-    } else {
+    } else {  
       // 显示正确图标
       addClass(classChildRef.current, 'course-tips-true')
       setClassValue({ course: value })
@@ -119,7 +119,8 @@ export default class CreateClass extends PureComponent {
         dropDowm,
         dropDowm: { section, grade },
         singleBox, singleBox: { classType, exitPermissions },
-
+        setDropDowmValue,
+        singleBoxFocusValue
       },
       state: { newClass, schoolIstrue, classIstrue },
       schoolRef,
@@ -132,18 +133,20 @@ export default class CreateClass extends PureComponent {
     const resl = { ...newClass, ...createClass, ...singleBox, ...dropDowm }
     this.setState({ newClass: resl }, () => {
 
+      console.log(classType);
+      console.log(grade);
       // 表单验证
       if (!schoolIstrue) {
         alert(`学校名称不正确,请重新输入`)
-      } else if (section === undefined) {
+      } else if (section === undefined||section === '') {
         alert('请选择学段')
-      } else if (grade === undefined) {
+      } else if (grade === undefined || grade === '') {
         alert('请选择年级')
       } else if (!classIstrue) {
         alert(`班级名称不正确,请重新输入`)
-      } else if (classType === undefined) {
+      } else if (classType === undefined||classType === '') {
         alert('请选择班级类型')
-      } else if (exitPermissions === undefined) {
+      } else if (exitPermissions === undefined||exitPermissions === '') {
         alert('退出权限未设置')
       } else {
 
@@ -153,10 +156,25 @@ export default class CreateClass extends PureComponent {
         // 初始化输入框
         schoolRef.current.value = ''
         classRef.current.value = ''
+        // 初始化下拉框
+        setDropDowmValue({
+          section: '',
+          grade: ''
+        })
+        // 初始化啊单选框
+        singleBoxFocusValue({
+          classType: '',
+          exitPermissions: ''
+        })
+        
+        // 通知DropDowm和singBox初始化状态
+        PubSub.publish('initVuale')
 
         // 初始化tips
         addClass(classChildRef.current, 'course-tips-hide')
         addClass(schoolChildRef.current, 'school-tips-hide')
+
+
         // 显示成功添加弹框
         this.setState({ display: "block" })
         this.setState({ schoolIstrue: false })
@@ -198,6 +216,7 @@ export default class CreateClass extends PureComponent {
   }
 
   render() {
+
     const classType = ['行政班', '教学班']
     const exitPermissions = ['允许退出', '通知班级管理员审核后退出', '禁止退出']
     const grade = ['年级', '一年级', '二年级', '三年级', '四年级']

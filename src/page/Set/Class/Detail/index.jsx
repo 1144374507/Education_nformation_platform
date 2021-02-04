@@ -7,6 +7,7 @@ import { request } from '../../../../network/request'
 import BackClassBtn from '../../../../components/content/BackClassBtn'
 import './css/index.css'
 
+// 路由懒加载
 import Loading from '../../../Loading'
 const Teachers = lazy(() => import('../../../../containers/Detail/Teachers'))
 const Studens = lazy(() => import('../../../../page/Set/Class/Detail/Studens'))

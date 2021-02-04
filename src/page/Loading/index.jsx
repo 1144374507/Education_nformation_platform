@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 
+// 路由懒加载 期间显示
 export default class Loading extends PureComponent {
 	render() {
 		return (

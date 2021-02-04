@@ -1,0 +1,2 @@
+(this.webpackJsonpreact_staging=this.webpackJsonpreact_staging||[]).push([[10],{93:function(t,e,n){"use strict";n.r(e),n.d(e,"default",(function(){return o}));var r=n(1),c=n(10),a=n(11),i=n(13),u=n(12),s=n(0),o=function(t){Object(i.a)(n,t);var e=Object(u.a)(n);function n(){return Object(c.a)(this,n),e.apply(this,arguments)}return Object(a.a)(n,[{key:"render",value:function(){return Object(r.jsx)("div",{children:"Hello ........"})}}]),n}(s.PureComponent)}}]);
+//# sourceMappingURL=10.98385a19.chunk.js.map

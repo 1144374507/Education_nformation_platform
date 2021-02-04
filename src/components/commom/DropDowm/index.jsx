@@ -28,13 +28,21 @@ export default class DropDowm extends PureComponent {
 
   //生命周期函数 初始化 title
   componentDidMount() {
-    const data = this.props.data 
+    const data = this.props.data
     this.setState({ title: `请选择${data[0]}` })
+    // 订阅创建班级表单提交成功事件
+    this.token = PubSub.subscribe('initVuale', () => {
+      this.setState({ title: `请选择${data[0]}` })
+    })
+  }
+  componentWillUnmount() {
+    // 取消订阅
+    PubSub.unsubscribe(this.token)
   }
 
   // 点击 p 标签 展示 ul 下拉框
   showDRopDowmList = (event) => {
-    const data = this.props.data 
+    const data = this.props.data
     const { childNodes } = event.target
     const { dropDowmList, state: { lisHeightCount } } = this
     toggleClass(dropDowmList, 'dropdown-ul-active')
@@ -105,7 +113,7 @@ export default class DropDowm extends PureComponent {
   }
 
   render() {
-    const data = this.props.data 
+    const data = this.props.data
     const { showDRopDowmLi, showDRopDowmList, state: { title, lisHeightCount }, mouseleaveUL, onMouseEnterUl, mouseleaveP } = this
     return (
       <div className="dropdown">

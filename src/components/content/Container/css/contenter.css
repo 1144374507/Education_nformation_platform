@@ -164,6 +164,9 @@
 .personal-center{
   display: none;
 }
+.contenter-right-bar{
+  width: 700px;
+}
 
 .personal-center-right{
   width: 47px;

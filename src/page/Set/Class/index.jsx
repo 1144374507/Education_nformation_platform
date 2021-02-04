@@ -1,13 +1,17 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent, lazy, Suspense} from 'react'
 import { Link, Route, Switch } from 'react-router-dom'
 import PubSub from 'pubsub-js'
 
 import { request } from '../../../network/request'
+
+import Loading from '../../Loading'
 import ClassSynopsis from '../../../components/content/ClassSynopsis'
-import Detail from '../../../containers/Detail'
-import Create from '../../../containers/Create'
+
 
 import './css/index.css'
+// 路由懒加载
+const Detail = lazy(() => import('../../../containers/Detail'))
+const Create = lazy(() => import('../../../containers/Create'))
 
 export default class MyClass extends PureComponent {
 
@@ -94,10 +98,12 @@ export default class MyClass extends PureComponent {
             }
           </div>
         </div>
-        <Switch>
-          <Route path='/class/create' component={Create}></Route>
-          <Route path={`/class/:id`} component={Detail}></Route>
-        </Switch>
+        <Suspense fallback={<Loading></Loading>}>
+          <Switch>
+            <Route path='/class/create' component={Create}></Route>
+            <Route path={`/class/:id`} component={Detail}></Route>
+          </Switch>
+          </Suspense>
       </div>
     )
   }
